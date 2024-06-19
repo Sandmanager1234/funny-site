@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background-color: #1c1c1c;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+}
+  
+.logos-slider {
+overflow: hidden;
+margin: 100px 0px;
+white-space: nowrap;
+position: relative;
+height: 300px;
+box-shadow: inset 0px 0px 10px 20px #1c1c1c;
+}
+.logos-slider:before, 
+.logos-slider:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 33%;
+  z-index: 2;
+}
+
+.logos-slider:before {
+  top: 0;
+  background: linear-gradient(to top, rgba(255,255,255,0) 0%, rgba(255,255,255,0), 10%,#1c1c1c 100%);
+}
+
+.logos-slider:after {
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0), 10%,#1c1c1c 100%);
+}
+
+.logos-slider__content {
+    .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 15px 100px;
+    color: #999;
+    }
+}
+
+.logos-slider__animation {
+    display: inline-block;
+    animation: 90s slide-animation infinite linear;
+}
+
+@keyframes slide-animation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.logo {
+
+justify-content: center;
+align-items: center;
+width: 100px;
+height: 100px;
+margin: 0 75px;
+padding-top: 30px;
+}
+
+.logo svg {
+    width: 100%;
+    height: auto;
+    fill: #10bff6;
+}
+        
+.logo:nth-child(2n) {
+    svg {
+    fill: #fff;
+    }
+}
+
+.word {
+    font-size: 70px;
+    color: white;
+    text-align: center;
+}
+
+.podpis {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
